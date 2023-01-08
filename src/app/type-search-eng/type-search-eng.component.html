@@ -13,7 +13,7 @@
     background-color: RoyalBlue;
   }
 </style>
-<div  class="container">
+<div *ngIf="showBar"  class="container">
   <h2> please choose your case Type </h2>
 
 
@@ -57,7 +57,7 @@
         <td>{{ getEngDistrictName(cas.court_district) }}</td>
         <td>{{ cas.date_open }}</td>
         <td>{{ cas.date_close }}</td>
-        <button class="btn"><i class="fa fa-home" > show</i></button>
+        <button class="btn"><i class="fa fa-home" (click)="sendNumberTodetails(cas.case_num)"> show</i></button>
 
       </tr>
       </ng-container>
@@ -65,5 +65,9 @@
     </table>
   </div>
 
+</div>
+
+<div *ngIf="showDetails">
+  <app-case-details-eng [CaseNumber]="selectCaseNumber"></app-case-details-eng>
 </div>
 

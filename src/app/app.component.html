@@ -45,7 +45,7 @@
   <div class="spacer"></div>
   <button type="button" class="btn btn-danger" (click)="routeTOHome()">Home</button>
   <div class="spacer"></div>
-  <button type="button" class="btn btn-primary">Search by Case ID</button>
+  <button type="button" class="btn btn-primary" (click)="routeTOIdsearch()">Search by Case ID</button>
   <div class="spacer"></div>
   <button type="button" class="btn btn-primary" (click)="routeTOTypeSearch()">Search by Case Type</button>
   <div class="spacer"></div>
@@ -80,6 +80,15 @@
     </div>
     <div *ngIf="lang == 'Eng'">
       <app-type-search-eng></app-type-search-eng>
+    </div>
+  </div>
+
+  <div *ngIf="router =='id-search'">
+    <div *ngIf="lang == 'Heb'">
+      <app-search-idheb></app-search-idheb>
+    </div>
+    <div *ngIf="lang == 'Eng'">
+      <app-search-ideng></app-search-ideng>
     </div>
   </div>
 

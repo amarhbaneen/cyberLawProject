@@ -1,0 +1,135 @@
+<div dir="rtl" class="card shadow-sm">
+  <div class="card-header">
+    <h3 class="card-title">
+      מספר תיק: {{targetCase.case_num}}</h3>
+    <div class="card-toolbar">
+      <button type="button" class="btn btn-sm btn-light">
+         סוג תביעה:{{getEngCaseType(targetCase.case_matter)}}
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        מועד פתיחת התיק:{{targetCase.date_open}}
+      </div>
+      <div class="col">
+        מועד מתן החלטה סוגרת:{{targetCase.date_close}}
+      </div>
+      <div class="col">
+        מחוז:{{getEngDistrictName(targetCase.court_district)}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        שנת משפט :{{targetCase.trial_year}}
+      </div>
+      <div class="col">
+        מספר קדמי משפט: {{targetCase.cnt_trial_hrng}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        מועד קדם משפט ראשון:{{targetCase.date_first_pretrial_hrng}}
+      </div>
+      <div class="col">
+        מועד קדם משפט אחרון: {{targetCase.date_last_pretrial_hrng}}
+      </div>
+      <div class="col">
+        מועד הגשת כתב הגנה:{{targetCase.date_defense_statement}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        האם קדם המשפט האחרון היה "קדם משפט מסכם" ?: {{getSummaryResult(targetCase.summary_pretrial_hrng)}}
+      </div>
+      <div class="col">
+        מספר אנשים שהגישו תצהירים וחוות דעת מומחה:{{getWitnessNum(targetCase.cnt_witness_and_experts_depos)}}
+      </div>
+
+      <div class="col">
+        מספר עדים (עובדתיים +מומחים)-אם עד העיד מספר פעמים - נספר כעד אחד (מספר עדים ולא מספר עדויות):{{getWitnessNum(targetCase.cnt_witness_and_experts_testimony)}}
+      </div>
+
+      <div class="col">
+
+        מספר דיוני הוכחות- כולל דיונים בהם היו סיכומים בע"פ":{{getWitnessNum(targetCase.cnt_trial_hrng)}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        מועד דיון הוכחות ראשון:{{targetCase.date_first_trial_hrng}}
+      </div>
+      <div class="col">
+        מועד דיון הוכחות אחרון:{{targetCase.date_last_trial_hrng}}
+      </div>
+      <div class="col">
+        אופן תיעור דיוני הוכחות:{{getMethoud(targetCase.transcription)}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        מספר עמודי פרוטוקול ההוכחות (אומדן משך הוכחות) - מוקלט:{{getWitnessNum(targetCase.num_protocol_pages_recorded)}}
+      </div>
+      <div class="col">
+        מספר עמודי פרוטוקולים של הוכחות (אומדן משך הוכחות) - מוקלד: {{getWitnessNum(targetCase.num_protocol_pages_typed)}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        מספר סופי של עמודי פרוטוקול:{{getWitnessNum(targetCase.final_num_protocol_pages)}}
+      </div>
+      <div class="col">
+        מועד דיון אחרון:{{targetCase.date_final_hrng}}
+      </div>
+      <div class="col">
+        אם היו סיכומים בעל פה - מועד שמיעתם:{{targetCase.date_oral_summaries}}
+      </div>
+      <div class="col">
+        אם היו סיכומים בכתב - מועד סיום הגשתם. אם יש כמה סיכומים - האחרון:{{targetCase.date_written_summaries}}
+      </div>
+
+      <div class="col">
+        תאריך סיכום אחרון בתיק: {{targetCase.date_final_summary}}
+      </div>
+
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        מספר בקשות-לא כולל הודעות ותגובות, כולל בקשות לסעד זמני ובדרך כלל לא כולל בש"א:{{getWitnessNum(targetCase.cnt_requests)}}
+      </div>
+      <div class="col">
+        מתוך הבקשות - מס' הבקשות המהותיות :{{getWitnessNum(targetCase.cnt_essential_requests)}}
+      </div>
+      <div class="col">
+        מספר בקשות אחרי סגירה: {{getWitnessNum(targetCase.cnt_requests_after_closing)}}
+      </div>
+
+
+    </div>
+    <hr/>
+    <div class="row">
+
+      <div class="col">
+        אופן סגירה:{{getDispostion(targetCase.disposition)}}
+      </div>
+      <div class="col">
+        תוצאת סגירה: {{getCaseResult(targetCase.result)}}
+      </div>
+
+    </div>
+    <hr/>
+
+
+
+
+  </div>
+
+</div>

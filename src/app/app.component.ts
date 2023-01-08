@@ -27,4 +27,8 @@ export class AppComponent {
   routeTOHome() {
     this.router ='mainPage';
   }
+
+  routeTOIdsearch() {
+    this.router ='id-search';
+  }
 }

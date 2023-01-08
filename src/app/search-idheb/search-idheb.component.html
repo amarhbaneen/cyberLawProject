@@ -1,0 +1,14 @@
+<!--Directory Input Form-->
+<div  dir="rtl" *ngIf="showSearch" class="row">
+  <div class="input-group">
+
+    <span class="input-group-addon" id="basic-addon3">הכנס מספר תיק : </span>
+
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="selectedLevel" name="selectedLevel">
+    <button type="button" class="btn btn-primary" (click)="selected()">הצג</button>
+  </div>
+</div>
+
+<div *ngIf="!showSearch">
+  <app-case-details-heb [CaseNumber]="selectedLevel"></app-case-details-heb>
+</div>
