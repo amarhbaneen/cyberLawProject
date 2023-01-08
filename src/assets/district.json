@@ -1,0 +1,42 @@
+[
+  {
+
+    "courtNumber": "12",
+    "hebValue": "נצרת",
+    "engValue": "Nazareth"
+
+
+  },
+  {
+    "courtNumber": "13",
+    "hebValue": " חיפה",
+    "engValue": "Haifa"
+
+  },
+  {
+    "courtNumber": "14",
+    "hebValue": "מחוזי ירושלים",
+    "engValue": "Jerusalem"
+
+
+  },
+  {
+    "courtNumber": "15",
+    "hebValue": "מחוזי תל אביב-יפו",
+    "engValue": "Tel Aviv"
+
+  },
+  {
+    "courtNumber": "896",
+    "hebValue": "מחוזי מרכז",
+    "engValue": " Lod (Central)"
+
+  },
+  {
+    "courtNumber": "16",
+    "hebValue": "מחוזי באר שבע",
+    "engValue": "Beer Sheva"
+
+
+  }
+  ]

@@ -1,0 +1,73 @@
+[
+  {
+    "NumericCode": "3",
+    "hebValue": "אחר - תקנה 3 (אגרות)",
+    "engValue": "Other matter - regulation 3 of the courts regulations (courts fees)"
+  },
+  {
+    "NumericCode": "31",
+    "hebValue": "חוזים",
+    "engValue": "Contracts"
+  },
+  {
+    "NumericCode": "41",
+    "hebValue": "כספית אחרת",
+    "engValue": "Financial claims"
+
+  },
+  {
+    "NumericCode": "46",
+    "hebValue": "לשון הרע",
+    "engValue": "Torts - Defamation, libel, and slander"
+  },
+  {
+    "NumericCode": "51",
+    "hebValue": "מקרקעין",
+    "engValue": "Real Estate"
+
+  },
+  {
+    "NumericCode": "55",
+    "hebValue": "נזיקין- נזקי גוף",
+    "engValue": "Torts - personal injury - bodily harm  "
+  },
+  {
+    "NumericCode": "56",
+    "hebValue": "נזיקין- רשלנות רפואית",
+    "engValue": "Torts -medical malpractice "
+
+  },
+  {
+    "NumericCode": "89",
+    "hebValue": "פלתד",
+    "engValue": "Torts - bodily injury after a car accident "
+
+  },
+  {
+    "NumericCode": "96",
+    "hebValue": "קניין רוחני - פטנטים",
+    "engValue": "Intelectual property - patent infringement "
+
+  },
+  {
+    "NumericCode": "97",
+    "hebValue": "קניין רוחני אחר",
+    "engValue": "Intelectual property - other"
+  },
+  {
+    "NumericCode": "103",
+    "hebValue": "שיבוב וביטוח",
+    "engValue": "Insurance coverage cases "
+  },
+  {
+    "NumericCode": "105",
+    "hebValue": "תביעה אחרת (שאינה כספית ואינה בגדר תקנה 3)",
+    "engValue": "Other matters that are not financial or in accordance with regulation 3 of the courts regulations (courts fees)"
+
+  },
+  {
+    "NumericCode": "10293",
+    "hebValue": "נזיקין - תביעה אזרחית נגררת לפלילים",
+    "engValue": "Torts- the scheme of compensation for criminally inflicted personal injuries "
+  }
+]
