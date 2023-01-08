@@ -65,6 +65,10 @@ export class TypeSearchEngComponent {
   courts :COURT[]=DistrictJson;
   caseType: case_matter[]=CaseTypetJson;
   showTable: boolean =false;
+  showDetails: boolean = false;
+  selectCaseNumber:String = "";
+  showBar: boolean = true;
+
 
 
 
@@ -98,6 +102,15 @@ export class TypeSearchEngComponent {
 
   selected() {
     this.showTable = true;
+
+  }
+
+  sendNumberTodetails(case_num: String) {
+    this.showDetails = true;
+    this.selectCaseNumber = case_num;
+    this.showTable = false;
+    this.showBar = false;
+
 
   }
 }

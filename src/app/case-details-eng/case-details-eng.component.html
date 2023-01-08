@@ -1,18 +1,135 @@
 <div class="card shadow-sm">
   <div class="card-header">
     <h3 class="card-title">
-      {{targetCase.case_num}}</h3>
+      Case Number {{targetCase.case_num}}</h3>
     <div class="card-toolbar">
       <button type="button" class="btn btn-sm btn-light">
-        {{targetCase.case_matter}}
+         Case Type :{{getEngCaseType(targetCase.case_matter)}}
       </button>
     </div>
   </div>
   <div class="card-body">
-    {{targetCase.cnt_essential_requests}}
-    {{targetCase.cnt_pretrial_hrng}}
-    {{targetCase.cnt_requests}}
-    {{targetCase.cnt_witness_and_experts_depos}}
+   <div class="row">
+     <div class="col">
+       Filing Date :{{targetCase.date_open}}
+     </div>
+     <div class="col">
+       Disposition date : {{targetCase.date_close}}
+     </div>
+     <div class="col">
+      Court : {{getEngDistrictName(targetCase.court_district)}}
+     </div>
+   </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        Trial Year :{{targetCase.trial_year}}
+      </div>
+      <div class="col">
+        Number of pretrial hearings : {{targetCase.cnt_trial_hrng}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        Date of first pretrial hearing\conference :{{targetCase.date_first_pretrial_hrng}}
+      </div>
+      <div class="col">
+        Date of last pretrial hearing\conference : {{targetCase.date_last_pretrial_hrng}}
+      </div>
+      <div class="col">
+        Statement of defense filing date :  {{targetCase.date_defense_statement}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        Was the last pretrial hearing a "summation hearing"? : {{getSummaryResult(targetCase.summary_pretrial_hrng)}}
+      </div>
+      <div class="col">
+        Number of depositions and expert opinions submitted :{{getWitnessNum(targetCase.cnt_witness_and_experts_depos)}}
+      </div>
+
+      <div class="col">
+        Number of witnesses and experts (not number of testimonies) :{{getWitnessNum(targetCase.cnt_witness_and_experts_testimony)}}
+      </div>
+
+      <div class="col">
+        Number of trial hearings (including hearings of oral summaries) :{{getWitnessNum(targetCase.cnt_trial_hrng)}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        Date of first trial hearing :{{targetCase.date_first_trial_hrng}}
+      </div>
+      <div class="col">
+        Date of last trial  : {{targetCase.date_last_trial_hrng}}
+      </div>
+      <div class="col">
+        Method used to record trial hearings  :  {{getMethoud(targetCase.transcription)}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        Number of pages in the court transcripts of the trial hearings (for an audio recorded trial)  :{{getWitnessNum(targetCase.num_protocol_pages_recorded)}}
+      </div>
+      <div class="col">
+        Number of pages in the court transcripts of the trial hearings (for a trial transcribed by the court reporter)   : {{getWitnessNum(targetCase.num_protocol_pages_typed)}}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        Sum of transcript pages :{{getWitnessNum(targetCase.final_num_protocol_pages)}}
+      </div>
+      <div class="col">
+        Date of final hearing  : {{targetCase.date_final_hrng}}
+      </div>
+      <div class="col">
+        Date of oral summation of the case (when occurred)  :  {{targetCase.date_oral_summaries}}
+      </div>
+      <div class="col">
+        Date of the filing of the written summation  :  {{targetCase.date_written_summaries}}
+      </div>
+
+      <div class="col">
+        Date of final summary in the case  :  {{targetCase.date_final_summary}}
+      </div>
+
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        Number of motions filed during judicial proceeding :{{getWitnessNum(targetCase.cnt_requests)}}
+      </div>
+      <div class="col">
+        Number Of the motions filed, how many of them were substantive motions    : {{getWitnessNum(targetCase.cnt_essential_requests)}}
+      </div>
+      <div class="col">
+        Number of motions filed after the case was closed  :  {{getWitnessNum(targetCase.cnt_requests_after_closing)}}
+      </div>
+      <div class="col">
+        Date of final summary in the case  :  {{targetCase.date_final_summary}}
+      </div>
+
+    </div>
+    <hr/>
+    <div class="row">
+
+      <div class="col">
+        Manner of disposition :{{getDispostion(targetCase.disposition)}}
+      </div>
+      <div class="col">
+        Case result  : {{getCaseResult(targetCase.result)}}
+      </div>
+
+    </div>
+    <hr/>
+
+
+
 
   </div>
 

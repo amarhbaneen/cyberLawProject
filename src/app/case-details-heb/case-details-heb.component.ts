@@ -50,11 +50,11 @@ interface COURT{
 }
 
 @Component({
-  selector: 'app-case-details-eng',
-  templateUrl: './case-details-eng.component.html',
-  styleUrls: ['./case-details-eng.component.css']
+  selector: 'app-case-details-heb',
+  templateUrl: './case-details-heb.component.html',
+  styleUrls: ['./case-details-heb.component.css']
 })
-export class CaseDetailsEngComponent {
+export class CaseDetailsHebComponent {
   Cases: CASE[]=CaseJson;
   // @ts-ignore
   targetCase: CASE;
@@ -84,7 +84,7 @@ export class CaseDetailsEngComponent {
     let result="";
     this.courts.forEach(function (value){
       if(value.courtNumber == court_district){
-        result =value.engValue;
+        result =value.hebValue;
 
       }
 
@@ -98,7 +98,7 @@ export class CaseDetailsEngComponent {
     let result="";
     this.caseType.forEach(function (value){
       if(value.NumericCode == NumericCode){
-        result =value.engValue;
+        result =value.hebValue;
 
       }
 
@@ -109,16 +109,16 @@ export class CaseDetailsEngComponent {
 
   getSummaryResult(result: String){
     if(result == '1'){
-      return 'Yes';
+      return 'כן';
     }
     else {
-      return 'No';
+      return 'לא';
     }
   }
   getWitnessNum(result:String){
     result= result.toString();
     if(result == '-98' || result =='-99' || result == '-97'){
-      return "MISSING DATA";
+      return "חסר נתונים";
     }
     else{
       return result;
@@ -128,78 +128,79 @@ export class CaseDetailsEngComponent {
   }
   getMethoud(result:String){
     if(result == '1'){
-      return 'Audio recorded';
+      return 'מוקלט';
     }
     if(result == '2'){
-      return 'Typed';
+      return 'מוקלד';
     }
     if(result == '3'){
-      return 'No record';
+      return 'אין תיעוד';
     }
     if(result == '4'){
-      return 'both Audio and Typed';
+      return 'מוקלד ומתומלל';
     }
 
-    return 'MISSING DATA';
+    return 'חסר נתונים';
   }
 
   getDispostion(result: String) {
     if(result == '1'){
-      return 'Article 79A of the courts law in Israel';
+      return 'סעיף 79א לחוק בתי המשפט';
     }
     if(result == '8'){
-      return 'Delay of arbitration';
+      return 'פסק דין/החלטה';
     }
     if(result == '13'){
-      return 'Suspension of proceedings';
+      return 'עיכוב בוררות';
     }
     if(result == '4'){
-      return 'Judgment on the merits';
+      return 'התליית הליכים';
     }
     if(result == '20'){
-      return 'Withdrawal of the claim';
+      return 'נדחה/נמחק לבקשת התובע';
     }
     if(result == '67'){
-      return 'Consent judgment - giving effect to an agreement to reject the case ';
+      return 'דחייה בעקבות פשרה';
     }
     if(result == '78'){
-      return 'Consent judgment -  giving effect to an agreement to withdraw the case';
+      return 'מחיקה בעקבות פשרה';
     }
     if(result == '89'){
-      return 'Consent judgment - giving effect to a settlement agreement';
+      return 'פשרה עם תוקף של פסק דין';
     }
     if(result == '90'){
-      return 'Consent judgment - giving effect to a mediation agreement ';
+      return 'גישור עם תוקף של פסק דין';
     }
 
 
-    return 'MISSING DATA';
+    return 'חסר נתונים';
   }
 
   getCaseResult(result: String) {
     if(result == '1'){
-      return 'Ruling in favor of the plaintiff';
+      return 'התביעה התקבלה';
     }
     if(result == '2'){
-      return 'Ruling in favor of the defendant';
+      return 'התביעה נדחתה';
     }
     if(result == '3'){
-      return 'Case dismissed';
+      return 'התביעה נמחקה';
     }
     if(result == '4'){
-      return 'Suspension by arbitral proceedings';
+      return 'עיכוב בוררות';
     }
     if(result == '11'){
-      return 'A decision granting only part of the remedies requested partial relief';
+      return 'התביעה התקבלה חלקית';
     }
     if(result == '24'){
-      return 'Termination of proceedings';
+      return 'הפסקת הליכים';
     }
     if(result == '89'){
-      return 'A compromise agreement - settlement of some sort ';
+      return 'פשרה או גישור עם תוקף של פסק דין';
     }
     else{
-      return " MISSING DATA ";
+      return "חסר נתונים ";
     }
   }
+
 }
